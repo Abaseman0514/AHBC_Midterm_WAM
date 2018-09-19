@@ -1,0 +1,60 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    text-align: center;
+}
+
+p, a {
+    color: rgb(77, 161, 218);
+    font-size: 10pt;
+}
+
+h1 {
+    margin: 0 auto;
+    width: 70%;
+}
+
+h3 {
+    font-size: 18pt;
+    font-family: 'Kaushan Script', cursive;
+    text-shadow: -4px 3px 2px rgba(77, 161, 218, 1);
+    text-align: center;
+}
+
+.name {
+    font-size: 25pt;
+    font-family: 'Kaushan Script', cursive;
+    text-shadow: -4px 3px 2px rgba(77, 161, 218, 1);
+}
+
+.recordPlate {
+    margin: 0 auto;
+    width: 50%;
+    border: solid thick rgb(77, 161, 218);
+    padding: 5px;
+}
+
+#sandwich {
+    color: white;
+}
+
+footer {
+    text-align: center;
+}
+
+#checkout {
+    margin: 0 auto;
+    width: 80%;
+    height: 20px;
+    background-color: rgb(77, 161, 218);
+}
+/* 
+@media screen and (min-width:768px) {
+    body {
+        background: url("recordPlate.jpg") center center no-repeat;
+        background-size: 50%;
+    }
+} */
