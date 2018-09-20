@@ -53,3 +53,55 @@ $('.submit').on('click', function(){
 $('.receipt').on('click', function(){
     window.alert(`${order}`); 
 });
+
+const jazzClub = 9.50;
+const fries = 4.24;
+const water = 2;
+const taxs =.06;
+
+function add(a, b, c){
+   return a + b + c;
+    
+}
+
+function sum() {
+    var n = 0;
+    for (var i=0; i < arguments.length; i++) {
+        n += arguments[i];
+    }
+    return n;
+}//function to add
+
+
+
+let brown = add(jazzClub,fries, water);
+
+$('.removeItem').on('click', function(){
+    $('li:current').detach();
+
+});
+
+$('#checkout').one('click', function(){
+    $('.subTotal').append("  ", brown);
+    $('.total').append("  ", brown * taxs + brown);
+    $('.tax').append(" ", brown * taxs);
+});//checkout button that adds and multiplies totals
+
+$('#cash').on('click', function(){
+    $('cash').hide();
+});
+
+
+
+
+$.get('http://www.flyingmusic.com/archives/2015-2014/know-facts-motown/'), (data) => {
+  
+    console.log(data.ul);
+  };//error cors
+
+
+// $('.removeItem').on('click', function(){
+//     $('li').$(this).slideToggle().hide();
+    
+// });
+
