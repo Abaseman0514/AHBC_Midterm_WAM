@@ -1,10 +1,10 @@
+$(".jazz").on("click", () => {
+	$("#jazz").toggle();
+})
+
 $(".blues").on("click", () => {
 	$("#blues").toggle();
 })
-
-$(".jazz").on("click", () => {
-	$("#jazz").toggle();
-	})
 
 $(".country").on("click", () => {
 	$("#country").toggle();
@@ -105,3 +105,6 @@ $.get('http://www.flyingmusic.com/archives/2015-2014/know-facts-motown/'), (data
     
 // });
 
+let addItem;
+
+let removeItem;
