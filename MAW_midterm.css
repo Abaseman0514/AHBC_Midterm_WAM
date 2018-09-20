@@ -1,7 +1,7 @@
 body {
     background-color: black;
     color: white;
-}
+ }
 
 header {
     text-align: center;
@@ -36,6 +36,10 @@ h3 {
     text-align: center;
 }
 
+.remove {
+    display: none;
+}
+
 .name {
     font-size: 25pt;
     font-family: 'Kaushan Script', cursive;
@@ -57,7 +61,7 @@ footer {
     text-align: center;
  }
 
-#checkout {
+#checkout, #submit {
     margin: 0 auto;
     width: 80%;
     height: 50px;
@@ -65,6 +69,11 @@ footer {
     font-size: 100%;
     font-family: 'Shojumaru', cursive;
     text-shadow: -4px 1px 1px white;
+    text-align: center;
+}
+
+.receipts {
+    text-align: center;
 }
 
 /* 
