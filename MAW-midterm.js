@@ -38,6 +38,32 @@ $(".tots").on("click", () => {
 	$("#tots").toggle();
 })
 
+$(".plus").on("click", function() {
+	$('.items').append($(this).siblings()[0].innerText);
+    // if(event.target.className === "plus"){
+    //     const li = document.createElement('li'); {
+    //     li.innerText = order <button class="remove">Remove</button> 
+    //     ul.appendChild(li);
+    })
+        
+//if item shows aka true, add remove button to menu on item
+
+//^^^^HOW TO MAKE THIS A LIST^^^
+
+// document.body.addEventListener("click", (event) => {
+//  if(event.target.className === "remove"){
+//    event.target.parentNode.remove();
+//  }
+
+//  }
+// });
+
+$('.overall').hide();
+
+$('#checkout').on('click', function(){
+$('.overall').show();
+});
+
 $('.calculate').on('click', function(){
     let provide = document.getElementById('provided').value;
     let due = document.getElementById('owed').value; 
