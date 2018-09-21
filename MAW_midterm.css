@@ -3,11 +3,11 @@ body {
     color: white;
  }
 
-header {
+header, footer {
     text-align: center;
 }
 
-a {
+a, .preTax, .afterTax, .total {
     color: rgb(77, 161, 218);
     font-size: 14pt;
     font-weight: bold;
@@ -17,7 +17,6 @@ button {
     background-color: rgb(77, 161, 218);
     font-family: 'Shojumaru', cursive;
 }
-
 
 p {
     color: white;
@@ -53,15 +52,12 @@ h3 {
     padding: 5px;
 }
 
+
 #sandwich {
     color: white;
 }
 
-footer {
-    text-align: center;
- }
-
-#checkout, #submit {
+#checkout, #submit, #payCash, #payCredit {
     margin: 0 auto;
     width: 80%;
     height: 50px;
@@ -75,7 +71,6 @@ footer {
 .receipts {
     text-align: center;
 }
-
 /* 
 @media screen and (min-width:768px) {
     #drink, #sides{
