@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -6,52 +7,157 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>forTUNE-ate</title>
   <link href="MAW_midterm.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Kaushan+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Kaushan+Script|Shojumaru" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <h1 class = "name">forTUNE-ate
+    <h1 class="name">forTUNE-ate
     </h1>
-    <img class = "recordPlate" src = "recordPlate.jpg" alt = "Record with fork and knife">
+    <img class="recordPlate" src="recordPlate.jpg" alt="Record with fork and knife">
   </header>
   <form>
-    <section id = "sandwich">
-      <h3 class="sandwich">Sandwiches</h3>
-      <p><input type="checkbox"><a href="#" class = "jazz">Jazz Club</a> $10 </p>
-      <p id="jazz" style="display: none;">Turkey, bacon, muenster cheese, homemade Jazz sauce, lettuce and tomato on grilled sourdough.</p>
-      <p><input type="checkbox"><a class = "blues" href="#">Blues BBQ</a> $10 </p>
-      <p id="blues" style="display: none;">Pulled BBQ pork, grilled onions, pickles, and blue cheese on a toasted onion roll.</p>
-      <p><input type="checkbox"><a class = "country" href="#">Country (Po) Boy $10</a> </p>
+    <section id="sandwich">
+      <h3 class="sandwich">Soul Sandwiches</h3>
+      <p>
+        <button class="plus">Add</button> 
+        <a href="#" class="jazz">Jazz Club</a>
+        <span class = "amount">
+            $10 </span>
+      </p> 
+      <p id="jazz" style="display: none;">Turkey, bacon, muenster cheese, homemade Jazz sauce, lettuce and tomato on
+        grilled sourdough.</p>
+      <p>
+      <p>
+        <button class="plus">Add</button> 
+        <a class="blues" href="#">Blues BBQ</a>
+        <span class = "amount">$10</span>
+      </p>
+      <p id="blues" style="display: none;">Pulled BBQ pork, grilled onions, pickles, and blue cheese on a toasted onion
+        roll.</p>
+      <p>
+        <button class="plus">Add</button> 
+        <a class="country" href="#">Country (Po) Boy</a>
+        <span class = "amount"> $10 </span>
       <p id="country" style="display: none;">Fried shrimp, lettuce, tomato, pickles and cajun mayo on a sub roll.</p>
-      <p><input type="checkbox"><a class = "motown" href="#">Motown Classic</a> (2 for) $8 </p>
-      <p id="motown" style="display: none;">Beef hot dogs smothered with homemade chili, mustard and onions on a hot dog bun.</p>
-      <p><input type="checkbox"><a class = "folk" href="#">Folk Falafel</a> $7 </p>
-      <p id="folk" style="display: none;">Deep fried chickpea patties with cucumber, tomato, feta cheese, kale, hummus and a tangy garlic sauce on rolled pita bread.</p>
+      <p>
+        <button class="plus">Add</button> 
+        <a class="motown" href="#">Motown Classic</a>
+        <span class = "amount"> $8 </span>
+      <p id="motown" style="display: none;">Beef hot dogs smothered with homemade chili, mustard and onions on a hot
+        dog bun.</p>
+      <p>
+        <button class="plus">Add</button> 
+        <a class="folk" href="#">Folk Falafel</a>
+        <span class = "amount"> $7 </span>
+      <p id="folk" style="display: none;">Deep fried chickpea patties with cucumber, tomato, feta cheese, kale, hummus
+        and a tangy garlic sauce on rolled pita bread.</p>
     </section>
 
-    <section id = "drink">
-      <h3 class="drinks">Drinks</h3>
-      <p><input type="checkbox"><a class = "fountain" href="#">Fountain Drink</a> $2 </p><p id="fountain" style="display: none;">Coca-cola&copy; products</p>
-      <p><input type="checkbox"><a class = "canned" href="#">Canned Drink</a> $1</p><p id="canned" style="display: none;">Coke&copy;, Diet Coke, and Sprite</p>
-      <p><input type="checkbox"><a href="#">Bottled Water</a> $2</p>
+    <section id="drink">
+      <h3 class="drinks">Pop</h3>
+      <p>
+        <button class="plus">Add</button> 
+        <a class="fountain" href="#">Fountain Drink</a>
+        <span class = "amount"> $2 </span>
+      <p id="fountain" style="display: none;">Coca-cola&copy; products</p>
+      <p>
+        <button class="plus">Add</button> 
+        <a class="canned" href="#">Canned Drink</a>
+        <span class = "amount"> $1</span>
+      <p id="canned" style="display: none;">Coke&copy;, Diet Coke, and Sprite</p>
+      <p>
+        <button class="plus">Add</button> 
+        <a class ="bottled" href="#">Bottled Water</a>
+        <span class = "amount"> $2</span><p id="bottled" style="display: none;">Sparkling or Still</p>
     </section>
 
-    <section id = "sides">
-      <h3 class="sides">Sides</h3>
-      <p><input type="checkbox"><a class = "fries" href="#">Waffle Fries</a> $2 </p><p id="fries" style="display: none;">Delicious fried potatoes in "waffle" style served with Jazz sauce for dipping.</p>
-      <p><input type="checkbox"><a class = "onion" href="#">Onion Rings</a> $2 </p><p id="onion" style="display: none;">Beer-battered, deep-fried onion rings served with our Blues BBQ sauce.</p>
-      <p><input type="checkbox"><a class = "tots" href="#">Tater Tots</a> $2 </p><p id="tots" style="display: none;">Rolled hash browns, served extra crispy, with a side of cajun mayo.</p>
+    <section id="sides">
+      <h3 class="sides">Accompaniment</h3>
+      <p>
+        <button class="plus">Add</button> 
+        <a class="fries" href="#">Waffle Fries</a>
+        <span class = "amount"> $2 </span>
+      <p id="fries" style="display: none;">Delicious fried potatoes in "waffle" style served with Jazz sauce for
+        dipping.</p>
+      <p>
+        <button class="plus">Add </button> 
+        <a class="onion" href="#">Onion Rings</a>
+        <span class = "amount"> $2 </span>
+      <p id="onion" style="display: none;">Beer-battered, deep-fried onion rings served with our Blues BBQ sauce.</p>
+      <p><button class="plus">Add</button> 
+        <a class="tots" href="#">Tater Tots</a>
+        <span class = "amount"> $2 </span>
+      <p id="tots" style="display: none;">Rolled hash browns, served extra crispy, with a side of cajun mayo.</p>
     </section>
 
   </form>
+
   <footer>
-    <button id="checkout">See Order</button> 
+    <button id="checkout">Review Order</button>
   </footer>
+
+  <span id="review">
+    <section id="items">
+      <h3>Order Review</h3>
+      <ul class="items">
+
+      </ul>
+    </section>
+
+    <h5 class="preTax">Subtotal: &#36</h5>
+    <h5 class="afterTax">Tax: &#36</h5>
+    <h5 class="total">Total: &#36</h5>
+
+
+    <button id="payCash">
+      Pay cash</button>
+
+    <button id="payCredit">
+      Pay credit</button>
+      
+    <section class="overall">
+      <form class="payment">
+        <section id = "cashPay">
+        Total Due ($):<br>
+        <input id="owed" type="text"><br>
+        Amount Provided ($):<br>
+        <input id="provided" type="text"><br>
+      
+      <br>
+      <button class="calculate" type="submit">Calculate</button>
+    </section>
+      <br>
+      <br>
+      <section id = "creditPay"><br>
+        <span class="credit">Card Number:<br></span>
+        <input type="text"><br>
+        Expiration Date:<br>
+        <input type="text"><br>
+        CVV:<br>
+        <input type="text"><br>
+        <br>
+        <br>
+        <button class="submit" type="submit">Submit</button>
+      </section>
+      </form>
+        </section>
+    <br>
+    <br>
+
+    <section class="receipts">
+      <button id="submit">Display Receipt</button>
+    </section>
+  </span>
+  </form>
+
+
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
   <script src="MAW-midterm.js"></script>
+
 </body>
 
 </html>

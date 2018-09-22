@@ -1,15 +1,26 @@
 body {
     background-color: black;
     color: white;
-}
+ }
 
-header {
+header, footer {
     text-align: center;
 }
 
-p, a {
+a, .preTax, .afterTax, .total {
     color: rgb(77, 161, 218);
-    font-size: 10pt;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+button {
+    background-color: rgb(77, 161, 218);
+    font-family: 'Shojumaru', cursive;
+}
+
+p {
+    color: white;
+    font-size: 14pt;
 }
 
 h1 {
@@ -18,10 +29,14 @@ h1 {
 }
 
 h3 {
-    font-size: 18pt;
+    font-size: 25pt;
     font-family: 'Kaushan Script', cursive;
     text-shadow: -4px 3px 2px rgba(77, 161, 218, 1);
     text-align: center;
+}
+
+.remove {
+    display: none;
 }
 
 .name {
@@ -37,24 +52,28 @@ h3 {
     padding: 5px;
 }
 
+
 #sandwich {
     color: white;
 }
 
-footer {
+#checkout, #submit, #payCash, #payCredit {
+    margin: 0 auto;
+    width: 80%;
+    height: 50px;
+    background-color: rgb(77, 161, 218);
+    font-size: 100%;
+    font-family: 'Shojumaru', cursive;
+    text-shadow: -4px 1px 1px white;
     text-align: center;
 }
 
-#checkout {
-    margin: 0 auto;
-    width: 80%;
-    height: 20px;
-    background-color: rgb(77, 161, 218);
+.receipts {
+    text-align: center;
 }
 /* 
 @media screen and (min-width:768px) {
-    body {
-        background: url("recordPlate.jpg") center center no-repeat;
-        background-size: 50%;
+    #drink, #sides{
+      display: wrap;
     }
 } */
