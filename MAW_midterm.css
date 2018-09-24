@@ -1,13 +1,17 @@
 body {
     background-color: black;
     color: white;
- }
+}
 
-header, footer {
+header,
+footer {
     text-align: center;
 }
 
-a, .preTax, .afterTax, .total {
+a,
+.preTax,
+.afterTax,
+.total {
     color: rgb(77, 161, 218);
     font-size: 14pt;
     font-weight: bold;
@@ -52,13 +56,20 @@ h3 {
     padding: 5px;
 }
 
+li {
+    list-style: none;
+}
+
 
 #sandwich {
     color: white;
 }
 
-#checkout, #submit, #payCash, #payCredit {
-    margin: 0 auto;
+#checkout,
+#submit,
+#payCash,
+#payCredit {
+    margin: 1% 10%;
     width: 80%;
     height: 50px;
     background-color: rgb(77, 161, 218);
@@ -71,9 +82,70 @@ h3 {
 .receipts {
     text-align: center;
 }
-/* 
+
 @media screen and (min-width:768px) {
-    #drink, #sides{
-      display: wrap;
+    body {
+        background-color: rgb(77, 161, 218);
     }
-} */
+
+    .name {
+        font-size: 70pt;
+        font-family: 'Kaushan Script', cursive;
+        text-shadow: -6px 3px 2px white;
+        color: black;
+        text-align: center;
+    }
+
+    button {
+        background-color: black;
+        color: rgb(77, 161, 218);
+    }
+
+    a {
+        color: black;
+        font-size: 25pt;
+    }
+
+    p {
+        font-size: 20pt;
+        text-align: center;
+    }
+
+    .preTax,
+    .afterTax,
+    .total {
+        color: black;
+        font-size: 14pt;
+        font-weight: bold;
+    }
+
+    #checkout,
+    #submit,
+    #payCash,
+    #payCredit {
+        margin: 1% 10%;
+        width: 80%;
+        height: 50px;
+        background-color: black;
+        font-size: 100%;
+        font-family: 'Shojumaru', cursive;
+        text-shadow: -4px 1px 1px rgb(77, 161, 218);
+        color: white;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 40pt;
+        font-family: 'Kaushan Script', cursive;
+        text-shadow: -4px 3px 2px white;
+        color: black;
+        text-align: center;
+    }
+
+    .recordPlate {
+        margin: 0 auto;
+        width: 50%;
+        border: solid thick black;
+        padding: 5px;
+    }
+}
