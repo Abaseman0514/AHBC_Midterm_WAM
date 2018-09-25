@@ -58,6 +58,9 @@ h3 {
 
 li {
     list-style: none;
+    color: rgb(77, 161, 218);
+    text-shadow: 2px -2px 0px white;
+    font-size: 15pt;
 }
 
 
@@ -147,5 +150,12 @@ li {
         width: 50%;
         border: solid thick black;
         padding: 5px;
+    }
+
+    li {
+        list-style: none;
+        color: black;
+        text-shadow: 2px -2px 0px white;
+        font-size: 15pt;
     }
 }

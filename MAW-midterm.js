@@ -4,25 +4,32 @@ let subtotal = 0;
 let tax = 0;
 let total = 0;
 
+let displayR = document.getElementById('receiptDisplay');
+
+// Get the button that opens the modal
+let submit = document.getElementById("submit");
+
+// Get the <span> element that closes the modal
+let closeR = document.getElementsByClassName("closeReceipt")[0];
 let facts = [
-    '“Motown” derives its name from “Motor City”, the nickname for Detroit where the label was founded. At the time the biggest car manufacturer, Ford was based here. Berry Gordy Jr, the label’s founder once worked for the Ford plant',
-    'Artists who recorded under Motown included <strong>The Temptations, The Supremes and Diana Ross, The Commodore and Lionel Ritchie, Martha Reeve &amp; The Vandellas, Smokey Robinson &amp; The Miracles, Marvin Gaye, The Four Tops, The Contours, The Jackson 5, Boyz II Men</strong> and <strong>Stevie Wonder</strong>. Stevie Wonder is the only artist from Motown’s heyday still signed to the label.',
-    'The first headquarters for “Tamla Records” (later incorporated into Motown Record Corporation) was a property bought by Gordy in Detroit and known as “Hitsville USA”. The Gordy family lived on the first floor',
+    '“Motown” derives its name from “Motor City”, the nickname for Detroit where the label was founded. At the time the biggest car manufacturer, Ford, was based in Detroit. Berry Gordy Jr., the label’s founder, once worked for the Ford plant',
+    'Artists who recorded under the Motown label included The Temptations, The Supremes and Diana Ross, The Commodores and Lionel Ritchie, Martha Reeve & The Vandellas, Smokey Robinson & The Miracles, Marvin Gaye, The Four Tops, The Contours, The Jackson 5, Boyz II Men and Stevie Wonder. Stevie Wonder is the only artist from Motown’s heyday still signed to the label.',
+    'The first headquarters for “Tamla Records” (later incorporated into Motown Record Corporation) was a property bought by Berry Gordy, Jr. in Detroit and known as “Hitsville USA”. The Gordy family lived on the first floor',
     'Originally, Gordy wanted to call the record label “Tammy Records” after the hit Debbie Reynolds song. Unfortunately, the name was taken, so he chose “Tamla Records” instead.',
-    'Outside of the US, the label operated under the name “Tamla Motown”',
-    'AS well as record label owner, Berry Gordy is a prolific songwriter, penning a catalogue of classics including: Do You Love Me <strong>(The Contours/Brian Poole &amp; The Tremloes)</strong>, I Want You Back (<strong>The Jackson 5</strong>) Reet Petite (<strong>Jackie Wilson</strong>), Jump (<strong>Kriss Kross</strong>), and Money (That’s What I Want (<strong>Barrett Strong/The Beatles/ The Flying Lizards</strong>)',
-    'In 1961, Motown had their first US No 1 with The Marvelettes Please Mr Postman',
-    'Martha Reeves initially worked for Motown as secretary. However, she did not stay in the job long, and was soon signed to the label with her backing group The Vandellas. They became one of the label’s hottest acts.',
+    'Outside of the US, the label operated under the name “Tamla Motown”.',
+    'In addition to being the "Motown" record label owner, Berry Gordy is a prolific songwriter, penning a catalogue of classics including: "Do You Love Me" by (The Contours/Brian Poole & The Tremloes), "I Want You Back" by The Jackson 5, "Reet Petite" by Jackie Wilson, "Jump"  by Kriss Kross, and "Money (That’s What I Want" by Barrett Strong/The Beatles/ The Flying Lizards.',
+    'In 1961, Motown had their first US No 1 with "Please Mr Postman" by The Marvelettes',
+    'Martha Reeves initially worked for Motown Records as a secretary. However, she did not stay in the job long, and was soon signed to the label with her back-up group The Vandellas. They became one of the label’s hottest acts.',
     'Motown artists were primarily African American and were encouraged to act and dress like royalty so they could be ambassadors for other black artists and break into the white popular music scene. To help them with this, Motown had a special department dedicated to developing the skills, grace and poise needed.',
-    'The backing band on almost all of the Motown recordings are a group of highly dedicated and tight-knit group of musicians called <strong>The Funk Brothers</strong>. The surviving members received The Grammy Legend Award in 2004 and were induced into The Musicians Hall of Fame in Nashville in 2007',
+    'The back-up band on almost all of the Motown recordings are a group of highly dedicated and tight-knit group of musicians called "The Funk Brothers". The surviving members received The Grammy Legend Award in 2004 and were induced into The Musicians Hall of Fame in Nashville in 2007.',
     'Motown was the first commercial US record label to be owned by an African American',
-    'Gordy sold Motown to MCA and Boston Ventures in 1988. It was then sold to Polygram in 1994, before being transferred over to Universal Music Group when it acquired Polydor in 1999. Motown now operates under The Capitol Music Group, out of Capitol Tower in Los Angeles',
-    'Smokey Robinson, one of the artists under the Motown label called his daughter Tamla and his son Berry after the label and founder.',
-    'Between 1961 and 1971, Motown produced 110 US top 10 hits',
-    'Most of Motown’s greatest hits were written by songwriting trio, <strong>Holland–Dozier–Holland</strong>. The songwriters and Motown parted ways in 1967, and due a legal dispute with Motown, they wrote songs under the pseudenomyn Edythe Wayne until 1972',
-    'The duo <strong>LMFAO</strong> is made up of Berry Gordy Jr’s youngest son and one of his grandsons',
-    'A stage show about the label called Motown: The Musical, written by Gordy opened on Broadway in 2013 to rather mixed reviews and closed in 2015. The show is now playing in London’s West End.',
-    'Motown is credited with helping break down race relation barriers. Smokey Robinson recalls: “Into the \'60s, I was still not of a frame of mind that we were not only making music, we were making history. But I did recognize the impact because acts were going all over the world at that time. I recognized the bridges that we crossed, the racial problems and the barriers that we broke down with music. I recognized that because I lived it. I would come to the South in the early days of Motown and the audiences would be segregated. Then they started to get the Motown music and we would go back and the audiences were integrated and the kids were dancing together and holding hands.” ',
+    'Gordy sold Motown to MCA and Boston Ventures in 1988. It was then sold to Polygram in 1994 before being transferred over to Universal Music Group when it acquired Polydor in 1999. Motown now operates under The Capitol Music Group; out of Capitol Tower in Los Angeles',
+    'Smokey Robinson, one of the artists under the Motown label named his daughter Tamla and his son Berry, after the label and founder.',
+    'Between 1961 and 1971 Motown produced 110 US top 10 hits.',
+    'Most of Motown’s greatest hits were written by songwriting trio: Holland–Dozier–Holland. The songwriters and Motown parted ways in 1967, and due a legal dispute with Motown, they wrote songs under the pseudenomyn "Edythe Wayne" until 1972.',
+    'The duo LMFAO is made up of Berry Gordy Jr’s youngest son and one of his grandsons.',
+    'A stage show about the label called Motown: The Musical, written by Gordy, opened on Broadway in 2013. It had rather mixed reviews and closed in 2015. The show is also played in London’s West End.',
+    'Motown is credited with helping break down race relation barriers. Smokey Robinson recalls: “In the \'60s, I was still not of a frame of mind that we were not only making music, we were making history. But I did recognize the impact because acts were going all over the world at that time. I recognized the bridges that we crossed, the racial problems and the barriers that we broke down with music. I recognized that because I lived it. I would come to the South in the early days of Motown and the audiences would be segregated. Then they started to get the Motown music and we would go back and the audiences were integrated and the kids were dancing together and holding hands.” ',
 ]
 
 $(".jazz").on("click", () => {
@@ -65,15 +72,17 @@ $(".tots").on("click", () => {
     $("#tots").toggle();
 })
 
-
 $(".plus").on("click", function () {
+    console.log($(this).siblings());
     itemName = $(this).siblings()[0].innerText
     itemCount++
     items[itemCount + itemName] = {
         amount: $(this).siblings()[1].innerText,
         name: $(this).siblings()[0].innerText,
-        description: $('#' + $(this).siblings()[0].className).html()
+        description: $('#' + $(this).siblings()[0].className).html(),
+        category: $(this).parent().parent().find('.category').text(),
     }
+
     $('.items').append('<li>' + items[itemCount + itemName]['name'] + '</li>')
     subtotal += parseFloat(items[itemCount + itemName]['amount'].trim().substring(1));
     $('.preTax').text('Subtotal: $' + subtotal);
@@ -105,18 +114,18 @@ $('#submit').on('click', function () {
     receipt += ' Did you know? ' + facts[Math.floor(Math.random() * (17 - 1 + 1)) + 1] + '\n';
     for (let k in items) {
         if (items.hasOwnProperty(k)) {
-            receipt += items[k].name + '-----' + items[k].amount + '\n'
+            receipt += items[k].name + '-----' + items[k].amount + '\n\n'
         }
     }
     receipt += 'Subtotal: $' + subtotal + '\n'
     receipt += 'Tax: $' + tax + '\n'
     receipt += 'Total: $' + total + '\n'
-    receipt += 'Payment Method: ' + paymentMethod + '\n'
-    window.alert(receipt)
+    receipt += 'Payment Method:  ' + paymentMethod + '\n'
+    alert(receipt)
 });
 
 $('.receipt').on('click', function () {
-    window.alert(`${order}`);
+    alert(`${order}`);
 });
 
 $('.removeItem').on('click', function () {
