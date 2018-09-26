@@ -4,13 +4,6 @@ let subtotal = 0;
 let tax = 0;
 let total = 0;
 
-let displayR = document.getElementById('receiptDisplay');
-
-// Get the button that opens the modal
-let submit = document.getElementById("submit");
-
-// Get the <span> element that closes the modal
-let closeR = document.getElementsByClassName("closeReceipt")[0];
 let facts = [
     '“Motown” derives its name from “Motor City”, the nickname for Detroit where the label was founded. At the time the biggest car manufacturer, Ford, was based in Detroit. Berry Gordy Jr., the label’s founder, once worked for the Ford plant',
     'Artists who recorded under the Motown label included The Temptations, The Supremes and Diana Ross, The Commodores and Lionel Ritchie, Martha Reeve & The Vandellas, Smokey Robinson & The Miracles, Marvin Gaye, The Four Tops, The Contours, The Jackson 5, Boyz II Men and Stevie Wonder. Stevie Wonder is the only artist from Motown’s heyday still signed to the label.',
