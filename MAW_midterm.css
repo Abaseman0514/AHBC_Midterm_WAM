@@ -154,8 +154,8 @@ li {
 
     li {
         list-style: none;
-        color: black;
-        text-shadow: 2px -2px 0px white;
+        color: white;
+        text-shadow: 2px -2px 0px black;
         font-size: 15pt;
     }
 }
